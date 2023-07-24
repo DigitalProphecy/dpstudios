@@ -1,2 +1,2 @@
 ENV_THEME=Digital Prophecy Studios 
-REMOTE_REPO=codeserver.dev.57f8277c-71ff-46c4-8a72-c5095fb3a318@codeserver.dev.57f8277c-71ff-46c4-8a72-c5095fb3a318.drush.in:2222/~/repository.gi
+REMOTE_REPO=ssh://codeserver.dev.57f8277c-71ff-46c4-8a72-c5095fb3a318@codeserver.dev.57f8277c-71ff-46c4-8a72-c5095fb3a318.drush.in:2222/~/repository.git
