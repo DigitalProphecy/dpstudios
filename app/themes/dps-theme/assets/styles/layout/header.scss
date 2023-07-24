@@ -1,6 +1,5 @@
 .header {
   background: white;
-  padding: 0 30px;
   position: relative;
   transition: ease-in-out all 0.2s;
   width: 100%;
@@ -15,11 +14,13 @@
     background: white;
     display: flex;
     justify-content: space-between;
-    padding: 0 30px;
     position: relative;
 
+    @media (min-width: $breakpoint-medium) {
+      padding: 0 30px;
+    }
+
     @media (min-width: $breakpoint-large) {
-      margin-left: -29px !important;
       width: 100% !important;
     }
 
@@ -106,13 +107,9 @@
   .mobile_modal {
     background-color: $white;
     height: 100vh;
-    position: absolute;
+    position: relative;
     top: -80px;
     width: 100%;
-
-    &__container {
-      padding-right: 20px;
-    }
 
     .navbar-container {
       ul.uk-navbar-nav {
@@ -138,6 +135,10 @@
           }
         }
       }
+    }
+
+    &__container {
+      padding: 0 20px;
     }
   }
 }
