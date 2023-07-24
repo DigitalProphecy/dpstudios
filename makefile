@@ -29,6 +29,10 @@ build: ## Runs build scripts for included themes
 	@echo "${GREEN}Running theme build scripts...${SET}"
 	@cd ${ROOT}/app/themes/${ENV_THEME} && yarn install
 
+watch: ## Runs build scripts for included themes
+	@echo "${GREEN}Running theme watch scripts...${SET}"
+	@cd ${ROOT}/app/themes/${ENV_THEME} && yarn run watch
+
 clean: ## Clears composer's internal package cache
 	composer clear-cache
 

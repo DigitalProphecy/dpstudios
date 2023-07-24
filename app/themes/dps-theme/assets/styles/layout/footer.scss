@@ -1,21 +1,31 @@
 .footer {
   background-color: $theme-navy-blue;
-  padding: 50px 0;
+  padding: 50px 30px;
 
   &__info {
     align-content: center;
     border-bottom: solid 2px $theme-orange;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
     margin-bottom: 15px;
     padding-bottom: 15px;
+    row-gap: 15px;
+
+    @media (min-width: $breakpoint-medium) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__info-logo {
+    margin: 0 auto;
     width: 75px;
 
-    img {
+    svg {
       width: 100%;
+    }
+
+    @media (min-width: $breakpoint-medium) {
+      margin: 0;
     }
   }
 
@@ -23,6 +33,11 @@
     align-content: center;
     display: flex;
     gap: 15px;
+    justify-content: center;
+
+    @media (min-width: $breakpoint-medium) {
+      justify-content: left;
+    }
 
     a {
       color: $white;
@@ -38,6 +53,11 @@
   &__social-icons {
     display: flex;
     gap: 15px;
+    justify-content: center;
+
+    @media (min-width: $breakpoint-medium) {
+      justify-content: left;
+    }
 
     a {
       height: 20px;
@@ -57,6 +77,8 @@
   }
 
   &__copyright {
+    text-align: center;
+
     p {
       color: $white;
     }
