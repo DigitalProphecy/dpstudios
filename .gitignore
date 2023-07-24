@@ -19,6 +19,7 @@ app/uploads/*
 app/plugins/*
 app/themes/mc-wp-starter-theme
 app/themes/twentytwentyone
+app/themes/twentytwentythree
 
 # Composer
 vendor
