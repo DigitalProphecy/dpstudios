@@ -1,0 +1,124 @@
+.hero {
+  align-content: center;
+  display: grid;
+  height: 80vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  @media (min-width: $breakpoint-medium) {
+    height: 40vh;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    height: 100vh;
+  }
+
+  &::before {
+    background-color: rgba(0, 0, 0, 0.6);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+  }
+
+  &__effect {
+    background-color: rgba($color: $theme-blue, $alpha: 0.5);
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    width: 100%;
+
+    @media (min-width: $breakpoint-large) {
+      height: 100%;
+      width: 70%;
+    }
+  }
+
+  &__sub-heading {
+    font-size: 20px;
+  }
+
+  &__content {
+    color: $white;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+
+    @media (min-width: $breakpoint-large) {
+      padding-left: 10px;
+      text-align: left;
+      width: 75%;
+    }
+  }
+
+  &__title {
+    color: $white;
+    font-size: 40px;
+    padding: 0 30px;
+    text-transform: uppercase;
+
+    @media (min-width: $breakpoint-medium) {
+      font-size: 54px;
+      padding: 0;
+    }
+
+    @media (min-width: $breakpoint-large) {
+      font-size: 141px;
+    }
+  }
+
+  &__body {
+    display: none;
+    font-size: 18px;
+    line-height: 25px;
+    padding: 0 30px;
+    width: 100%;
+
+    @media (min-width: $breakpoint-medium) {
+      display: block;
+      font-size: 25px;
+      line-height: 35px;
+      margin: 0 auto;
+      padding: 0;
+      width: 75%;
+    }
+
+    @media (min-width: $breakpoint-large) {
+      font-size: 25px;
+      line-height: 35px;
+      margin: 0;
+      padding: 0;
+      width: 75%;
+    }
+  }
+
+  &--medium {
+    background-position: top center !important;
+    height: 30vh;
+
+    h1 {
+      font-size: 71px;
+    }
+
+    @media (min-width: $breakpoint-medium) {
+      height: 60vh;
+
+      h1 {
+        font-size: 121px;
+      }
+    }
+  }
+
+  &--small {
+    background-position: top center !important;
+    height: 40vh;
+
+    h1 {
+      font-size: 110px;
+    }
+  }
+}

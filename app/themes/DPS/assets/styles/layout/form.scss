@@ -1,0 +1,48 @@
+.gform_wrapper {
+  form {
+    .gform_body {
+      .gform_fields {
+        .gfield {
+          .ginput_container {
+            input {
+              background-color: transparent;
+              border-bottom: 2px white solid;
+              border-left: transparent;
+              border-right: transparent;
+              border-top: transparent;
+              color: $white;
+              height: 45px;
+            }
+
+            textarea {
+              background-color: transparent;
+              border-bottom: 2px white solid;
+              border-left: transparent;
+              border-right: transparent;
+              border-top: transparent;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+
+    .gform_footer {
+      input {
+        background-color: $theme-orange;
+        border: none;
+        color: $white;
+        cursor: pointer;
+        font-size: 15px;
+        padding: 20px 0;
+        text-transform: uppercase;
+        transition: all ease-in-out 0.3s;
+        width: 150px;
+
+        &:hover {
+          background-color: $theme-darker-orange;
+        }
+      }
+    }
+  }
+}

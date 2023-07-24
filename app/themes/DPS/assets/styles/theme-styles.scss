@@ -1,0 +1,31 @@
+// SCSS Imports
+// https://sass-guidelin.es/#the-7-1-pattern
+
+// Framework
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+@import 'vendors/custom-ui-kit';
+
+// Base
+@import 'base/reset';
+@import 'base/base';
+@import 'base/accessibility';
+@import 'base/entry-content';
+@import 'base/typography';
+@import 'base/media';
+
+// layout
+@import 'layout/header.scss';
+@import 'layout/footer.scss';
+@import 'layout/form.scss';
+
+// Components
+@import 'components/hero.scss';
+@import 'components/service.scss';
+@import 'components/content.scss';
+@import 'components/item-slider.scss';
+@import 'components/info-card.scss';
+@import 'components/image-grid.scss';
+@import 'components/image.scss';
+@import 'components/project-list.scss';
+@import 'components/gform.scss';

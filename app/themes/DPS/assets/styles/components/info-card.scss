@@ -1,0 +1,172 @@
+.info_card {
+  // Card Item Parent
+  &__items {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 100%;
+
+    @media (min-width: $breakpoint-medium) {
+      gap: 56px;
+      grid-template-columns: 46% 46%;
+    }
+
+    @media (min-width: $breakpoint-large) {
+      grid-template-columns: 400px 400px;
+    }
+  }
+
+  // Card Item Children
+  &__item {
+    border-radius: 8px;
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+
+    &-icon {
+      margin: 0 auto;
+      width: 35px;
+    }
+  }
+
+  // Car Item CTA
+  &__cta {
+    background-color: transparent;
+    display: block;
+    font-weight: bold;
+    padding: 12px 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all ease-in-out 0.3s;
+    width: 100%;
+
+    @media (min-width: $breakpoint-large) {
+      width: 185px;
+    }
+
+    &:hover {
+      background-color: $theme-blue;
+    }
+  }
+
+  &--theme-orange {
+    background-color: $theme-orange;
+    color: $white;
+
+    .info_card__item-icon {
+      fill: $white;
+    }
+
+    .info_card__item {
+      background-color: $theme-brown;
+    }
+
+    .info_card__cta {
+      border: 2px solid $theme-brown;
+      color: $theme-brown;
+
+      &:hover {
+        background-color: $theme-brown;
+        color: $white;
+      }
+    }
+  }
+
+  &--transparent {
+    background-color: transparent;
+    color: $theme-black;
+
+    .info_card__item-icon {
+      fill: $theme-blue;
+    }
+
+    .info_card__item {
+      background-color: $theme-black;
+      color: $white;
+    }
+
+    .info_card__cta {
+      border: 2px solid $theme-black;
+      color: $theme-black;
+
+      &:hover {
+        background-color: $theme-black;
+        color: $white;
+      }
+    }
+  }
+
+  //
+  &--theme-black {
+    background-color: $theme-black;
+    color: $white;
+
+    .info_card__item-icon {
+      fill: $white;
+    }
+
+    .info_card__item {
+      background-color: $theme-blue;
+    }
+
+    .info_card__cta {
+      border: 2px solid $theme-blue;
+      color: $theme-blue;
+
+      &:hover {
+        background-color: $theme-blue;
+        color: $white;
+      }
+    }
+  }
+
+  // Styles for the Side-by-side variant
+  &--sbs {
+    display: grid;
+    gap: 60px;
+    padding: 0 30px;
+
+    @media (min-width: $breakpoint-medium) {
+      display: grid;
+      gap: 60px;
+    }
+
+    @media (min-width: $breakpoint-large) {
+      display: flex;
+      gap: 60px;
+    }
+
+    .info_card__content {
+      align-content: center;
+      display: grid;
+      max-width: 600px;
+      row-gap: 45px;
+      width: 100%;
+    }
+  }
+
+  // Styles for the stacked variant
+  &--stacked {
+    display: grid;
+    row-gap: 80px;
+
+    .module__content {
+      margin: 0 auto;
+      max-width: 800px;
+      text-align: center;
+
+      a {
+        margin: 0 auto;
+      }
+    }
+
+    .info_card__items {
+      @media (min-width: $breakpoint-medium) {
+        gap: 56px;
+        grid-template-columns: repeat(auto-fill, 22%);
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.project_list {
+  padding-left: 30px;
+  padding-right: 30px;
+
+  &__items {
+    li {
+      position: relative;
+
+      a {
+        text-decoration: none;
+
+        div.uk-card {
+          background-color: transparent;
+          position: relative;
+          transition: all ease-in-out 0.3s;
+
+          p {
+            display: none;
+          }
+
+          &:hover {
+            &::before {
+              background-color: rgba($color: #000000, $alpha: 0.4);
+              content: '';
+              height: 100%;
+              position: absolute;
+              width: 100%;
+            }
+
+            p {
+              display: block;
+            }
+          }
+        }
+      }
+
+      p {
+        color: $white;
+        font-size: 18px;
+        font-weight: bold;
+        position: relative;
+      }
+    }
+  }
+
+  &__filter {
+    column-gap: 20px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+
+    li {
+      background-color: $theme-blue;
+      overflow: hidden;
+      padding: 10px 20px;
+      transition: ease-in-out all 0.3s;
+
+      &:hover {
+        background-color: $theme-orange;
+      }
+
+      a {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}

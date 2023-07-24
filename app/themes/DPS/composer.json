@@ -1,0 +1,25 @@
+{
+  "name": "modern-climate/dps-wp-starter-theme",
+  "description": "A WordPress starter theme for Modern Climate.",
+  "type": "wordpress-theme",
+  "text-domain": "dps-starter",
+  "config": {
+    "vendor-dir": "vendor",
+    "bin-dir": "bin",
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "DPS\\": ""
+    }
+  },
+  "require": {
+    "vinkla/extended-acf": "11.2",
+    "dannyvanholten/acf-gravityforms-add-on": "^1.3"
+  },
+  "require-dev": {
+    "php-stubs/acf-pro-stubs": "*"
+  }
+}

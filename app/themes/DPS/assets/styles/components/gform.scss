@@ -1,0 +1,115 @@
+.gform {
+  background-position: left;
+  background-size: cover;
+  position: relative;
+
+  &::after {
+    background: $white;
+    content: '';
+    height: 60%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
+
+  &__cols {
+    background-color: $theme-black;
+    box-shadow: 0px 4px 15px #00000073;
+    display: block;
+    padding: 50px;
+    position: relative;
+    row-gap: 120px;
+    z-index: 2;
+
+    & > div {
+      color: $white;
+      width: 100%;
+
+      @media (min-width: $breakpoint-medium) {
+        width: 50%;
+      }
+    }
+
+    @media (min-width: $breakpoint-medium) {
+      column-gap: 120px;
+      display: flex;
+      justify-content: space-between;
+      padding: 100px;
+    }
+  }
+
+  &__heading {
+    padding-bottom: 100px;
+    position: relative;
+    width: 65%;
+    z-index: 2;
+  }
+
+  &__copy {
+    display: grid;
+    height: 100%;
+    margin-top: 40px;
+    row-gap: 60px;
+
+    @media (min-width: $breakpoint-medium) {
+      margin-top: 0;
+    }
+  }
+
+  &__form,
+  &__copy {
+    h3 {
+      padding-bottom: 40px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__info-items {
+    display: grid;
+    gap: 30px;
+    h4 {
+      color: $theme-orange;
+      font-size: 18px;
+      font-weight: 100;
+      padding-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 25px;
+      font-weight: bold;
+    }
+  }
+
+  &__info-item {
+    a {
+      color: $white;
+      text-decoration: none;
+
+      &:hover {
+        color: $theme-orange;
+      }
+    }
+  }
+
+  &__social-icons {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__social-icon {
+    a {
+      svg {
+        fill: $white;
+        transition: all ease-in-out 0.3s;
+      }
+
+      &:hover {
+        svg {
+          fill: $theme-orange;
+        }
+      }
+    }
+  }
+}

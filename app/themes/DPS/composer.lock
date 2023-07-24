@@ -1,0 +1,371 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "43263a3272370791d863d53c66c6a858",
+    "packages": [
+        {
+            "name": "composer/installers",
+            "version": "v1.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/installers.git",
+                "reference": "d20a64ed3c94748397ff5973488761b22f6d3f19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/installers/zipball/d20a64ed3c94748397ff5973488761b22f6d3f19",
+                "reference": "d20a64ed3c94748397ff5973488761b22f6d3f19",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0"
+            },
+            "replace": {
+                "roundcube/plugin-installer": "*",
+                "shama/baton": "*"
+            },
+            "require-dev": {
+                "composer/composer": "1.6.* || ^2.0",
+                "composer/semver": "^1 || ^3",
+                "phpstan/phpstan": "^0.12.55",
+                "phpstan/phpstan-phpunit": "^0.12.16",
+                "symfony/phpunit-bridge": "^4.2 || ^5",
+                "symfony/process": "^2.3"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Composer\\Installers\\Plugin",
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Installers\\": "src/Composer/Installers"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kyle Robinson Young",
+                    "email": "kyle@dontkry.com",
+                    "homepage": "https://github.com/shama"
+                }
+            ],
+            "description": "A multi-framework Composer library installer",
+            "homepage": "https://composer.github.io/installers/",
+            "keywords": [
+                "Craft",
+                "Dolibarr",
+                "Eliasis",
+                "Hurad",
+                "ImageCMS",
+                "Kanboard",
+                "Lan Management System",
+                "MODX Evo",
+                "MantisBT",
+                "Mautic",
+                "Maya",
+                "OXID",
+                "Plentymarkets",
+                "Porto",
+                "RadPHP",
+                "SMF",
+                "Starbug",
+                "Thelia",
+                "Whmcs",
+                "WolfCMS",
+                "agl",
+                "aimeos",
+                "annotatecms",
+                "attogram",
+                "bitrix",
+                "cakephp",
+                "chef",
+                "cockpit",
+                "codeigniter",
+                "concrete5",
+                "croogo",
+                "dokuwiki",
+                "drupal",
+                "eZ Platform",
+                "elgg",
+                "expressionengine",
+                "fuelphp",
+                "grav",
+                "installer",
+                "itop",
+                "joomla",
+                "known",
+                "kohana",
+                "laravel",
+                "lavalite",
+                "lithium",
+                "magento",
+                "majima",
+                "mako",
+                "mediawiki",
+                "miaoxing",
+                "modulework",
+                "modx",
+                "moodle",
+                "osclass",
+                "pantheon",
+                "phpbb",
+                "piwik",
+                "ppi",
+                "processwire",
+                "puppet",
+                "pxcms",
+                "reindex",
+                "roundcube",
+                "shopware",
+                "silverstripe",
+                "sydes",
+                "sylius",
+                "symfony",
+                "tastyigniter",
+                "typo3",
+                "wordpress",
+                "yawik",
+                "zend",
+                "zikula"
+            ],
+            "support": {
+                "issues": "https://github.com/composer/installers/issues",
+                "source": "https://github.com/composer/installers/tree/v1.12.0"
+            },
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-09-13T08:19:44+00:00"
+        },
+        {
+            "name": "dannyvanholten/acf-gravityforms-add-on",
+            "version": "1.3.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DannyvanHolten/acf-gravityforms-add-on.git",
+                "reference": "dd5f46274967dfe6ccd951dc4254ed912ca68528"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DannyvanHolten/acf-gravityforms-add-on/zipball/dd5f46274967dfe6ccd951dc4254ed912ca68528",
+                "reference": "dd5f46274967dfe6ccd951dc4254ed912ca68528",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.0",
+                "php": ">=5.6.4"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "ACFGravityformsField\\": "resources/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Say Hello GmbH",
+                    "email": "hello@sayhello.ch",
+                    "homepage": "http://www.sayhello.ch/"
+                },
+                {
+                    "name": "Danny van Holten",
+                    "email": "info@dannyvanholten.com",
+                    "homepage": "http://www.dannyvanholten.com/"
+                }
+            ],
+            "description": "Advanced Custom Fields: Gravity Forms Add-on",
+            "support": {
+                "issues": "https://github.com/DannyvanHolten/acf-gravityforms-add-on/issues",
+                "source": "https://github.com/DannyvanHolten/acf-gravityforms-add-on/tree/1.3.5"
+            },
+            "time": "2022-11-11T17:09:03+00:00"
+        },
+        {
+            "name": "vinkla/extended-acf",
+            "version": "11.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vinkla/extended-acf.git",
+                "reference": "4ed02a95435b49e37459b8a0c4759797314aafd1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vinkla/extended-acf/zipball/4ed02a95435b49e37459b8a0c4759797314aafd1",
+                "reference": "4ed02a95435b49e37459b8a0c4759797314aafd1",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "^3.6"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "11.2-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "WordPlate\\Acf\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent Klaiber",
+                    "email": "hello@doubledip.se"
+                },
+                {
+                    "name": "Chris Andersson",
+                    "email": "hello@puredazzle.se"
+                }
+            ],
+            "description": "Register advanced custom fields with object oriented PHP",
+            "keywords": [
+                "acf",
+                "advanced",
+                "custom",
+                "fields",
+                "wordplate",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/vinkla/extended-acf/issues",
+                "source": "https://github.com/vinkla/extended-acf/tree/11.2.0"
+            },
+            "time": "2021-11-03T13:41:55+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "php-stubs/acf-pro-stubs",
+            "version": "v6.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-stubs/acf-pro-stubs.git",
+                "reference": "3301f61c975ee6078fc89c1f6ba70358349ea137"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-stubs/acf-pro-stubs/zipball/3301f61c975ee6078fc89c1f6ba70358349ea137",
+                "reference": "3301f61c975ee6078fc89c1f6ba70358349ea137",
+                "shasum": ""
+            },
+            "require": {
+                "php-stubs/wordpress-stubs": "^4.7 || ^5.0 || ^6.0"
+            },
+            "require-dev": {
+                "php": "~7.1",
+                "php-stubs/generator": "^0.8"
+            },
+            "suggest": {
+                "symfony/polyfill-php73": "Symfony polyfill backporting some PHP 7.3+ features to lower PHP versions",
+                "szepeviktor/phpstan-wordpress": "WordPress extensions for PHPStan"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Advanced Custom Fields PRO stubs for static analysis.",
+            "homepage": "https://github.com/php-stubs/acf-pro-stubs",
+            "keywords": [
+                "PHPStan",
+                "acf",
+                "static analysis",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/php-stubs/acf-pro-stubs/issues",
+                "source": "https://github.com/php-stubs/acf-pro-stubs/tree/v6.0.6"
+            },
+            "time": "2022-12-25T22:14:41+00:00"
+        },
+        {
+            "name": "php-stubs/wordpress-stubs",
+            "version": "v6.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-stubs/wordpress-stubs.git",
+                "reference": "0009429e639b748eef1c955200ea0d4e5ad5627d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-stubs/wordpress-stubs/zipball/0009429e639b748eef1c955200ea0d4e5ad5627d",
+                "reference": "0009429e639b748eef1c955200ea0d4e5ad5627d",
+                "shasum": ""
+            },
+            "require-dev": {
+                "nikic/php-parser": "< 4.12.0",
+                "php": "~7.3 || ~8.0",
+                "php-stubs/generator": "^0.8.3",
+                "phpdocumentor/reflection-docblock": "^5.3",
+                "phpstan/phpstan": "^1.10.12",
+                "phpunit/phpunit": "^9.5"
+            },
+            "suggest": {
+                "paragonie/sodium_compat": "Pure PHP implementation of libsodium",
+                "symfony/polyfill-php73": "Symfony polyfill backporting some PHP 7.3+ features to lower PHP versions",
+                "szepeviktor/phpstan-wordpress": "WordPress extensions for PHPStan"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "WordPress function and class declaration stubs for static analysis.",
+            "homepage": "https://github.com/php-stubs/wordpress-stubs",
+            "keywords": [
+                "PHPStan",
+                "static analysis",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/php-stubs/wordpress-stubs/issues",
+                "source": "https://github.com/php-stubs/wordpress-stubs/tree/v6.2.1"
+            },
+            "time": "2023-05-18T04:35:23+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}

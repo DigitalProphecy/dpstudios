@@ -1,0 +1,143 @@
+.header {
+  background: white;
+  padding: 0 30px;
+  position: relative;
+  transition: ease-in-out all 0.2s;
+  width: 100%;
+  z-index: 100;
+
+  @media (min-width: $breakpoint-large) {
+    position: absolute;
+  }
+
+  nav {
+    align-items: center;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    position: relative;
+
+    @media (min-width: $breakpoint-large) {
+      margin-left: -29px !important;
+      width: 100% !important;
+    }
+
+    .navbar-container {
+      ul {
+        border-top: 2px $theme-black solid;
+        display: block;
+
+        @media (min-width: $breakpoint-medium) {
+          border-top: none;
+          display: flex;
+          gap: 30px;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        li {
+          a {
+            color: $theme-navy-blue;
+            font-weight: bold;
+            min-height: 40px;
+
+            &:hover {
+              color: $theme-orange;
+            }
+
+            @media (min-width: $breakpoint-medium) {
+              min-height: 80px;
+            }
+          }
+
+          &.current-menu-item {
+            border-left: 2px solid $theme-orange;
+
+            @media (min-width: $breakpoint-medium) {
+              border-left: transparent;
+            }
+
+            a {
+              color: $theme-orange;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .dps_logo {
+    width: 35px;
+
+    img {
+      width: 100%;
+    }
+
+    &__lg {
+      display: none;
+      width: 55px;
+
+      @media (min-width: $breakpoint-medium) {
+        display: block;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .mobile_menu {
+    align-items: center;
+    display: flex;
+    margin: 20px; /// update this name to mobile_navbar_menu
+
+    @media (min-width: $breakpoint-medium) {
+      display: none;
+    }
+
+    &__toggle {
+      min-height: 40px;
+    }
+  }
+
+  .mobile_modal {
+    background-color: $white;
+    height: 100vh;
+    position: absolute;
+    top: -80px;
+    width: 100%;
+
+    &__container {
+      padding-right: 20px;
+    }
+
+    .navbar-container {
+      ul.uk-navbar-nav {
+        border-top: none;
+        display: grid;
+        gap: 30px;
+
+        li {
+          border-left: none;
+
+          &::after {
+            background-color: $theme-orange;
+            content: '';
+            display: block;
+            height: 2px;
+            margin: 0 auto;
+            width: 60px;
+          }
+          a {
+            font-size: 55px;
+            font-weight: bold;
+            padding-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+}

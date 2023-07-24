@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;500&family=Roboto+Condensed:wght@300&display=swap');
+$oswald: 'Oswald', sans-serif;
+$robotoCon: 'Roboto Condensed', sans-serif;
+// Font Style
+
+h1,
+.h1 {
+  font-family: $oswald;
+  font-size: 32px;
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: 45px;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    font-size: 145px;
+  }
+}
+
+h2,
+.h2 {
+  font-family: $oswald;
+  font-size: 58px;
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: 100px;
+  }
+
+  p {
+    font-family: $oswald;
+    font-size: 58px;
+    line-height: 1;
+
+    @media (min-width: $breakpoint-medium) {
+      font-size: 100px;
+    }
+  }
+}
+
+h3,
+.h3 {
+  font-family: $oswald;
+  font-size: 25px;
+
+  @media (min-width: $breakpoint-large) {
+    font-size: 45px;
+  }
+}
+
+h4,
+.h4 {
+  font-family: $oswald;
+  font-size: 18px;
+
+  @media (min-width: $breakpoint-large) {
+    font-size: 25px;
+  }
+}
+
+.p,
+p {
+  font-family: $robotoCon;
+  line-height: 30px;
+}
+
+.a,
+a {
+  font-family: $robotoCon;
+  line-height: 25px;
+}
+
+.dps-btn-primary {
+  align-items: center;
+  background-color: transparent;
+  border: $theme-orange solid 2px;
+  color: $theme-orange;
+  display: flex;
+  font-family: $robotoCon;
+  font-size: 18px;
+  font-weight: bold;
+  height: 55px;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 16px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all ease-in-out 0.3s;
+  width: 200px;
+
+  @media (min-width: $breakpoint-large) {
+    margin: 0;
+  }
+
+  &:hover {
+    background-color: rgba($color: $theme-orange, $alpha: 0.5);
+    color: $white;
+  }
+}

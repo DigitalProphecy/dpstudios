@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol class="dps-logo" id="dps-logo">
+        <svg
+      width="264"
+      height="185"
+      viewBox="0 0 264 185"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+        d="M52.6855 101.124H88.6855L36.3487 184.714H0.348694L52.6855 101.124Z"
+        fill="black"
+      />
+        <path d="M172 0H208L92.3487 184.714H56.3487L172 0Z" fill="black" />
+        <path d="M228 0H264L211.648 83.6155H175.648L228 0Z" fill="black" />
+        </svg>
+    </symbol>
+</svg>

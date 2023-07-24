@@ -1,0 +1,26 @@
+// Basic Setup
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  word-wrap: break-word;
+  text-rendering: optimizeLegibility;
+}
+
+.module {
+  padding: 70px 0;
+
+  @media (min-width: $breakpoint-medium) {
+    padding: 150px 0;
+  }
+
+  &__content {
+    align-content: center;
+    display: grid;
+    max-width: 600px;
+    row-gap: 45px;
+    width: 100%;
+  }
+}
