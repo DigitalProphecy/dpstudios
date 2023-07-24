@@ -20,13 +20,14 @@
     border-radius: 8px;
     display: grid;
     gap: 20px;
-    padding: 20px;
+    padding: 50px;
     text-align: center;
     width: 100%;
 
     &-icon {
+      height: 87px;
       margin: 0 auto;
-      width: 35px;
+      width: 87px;
     }
   }
 
@@ -79,7 +80,15 @@
     color: $theme-black;
 
     .info_card__item-icon {
-      fill: $theme-blue;
+      svg {
+        fill: $theme-blue;
+        height: 100%;
+        width: 100%;
+
+        path {
+          fill: $theme-blue;
+        }
+      }
     }
 
     .info_card__item {

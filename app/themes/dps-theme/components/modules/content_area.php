@@ -17,7 +17,6 @@ $text_aligment = ACF::getField('text_aligment', $data);
 $themeColor = ACF::getField('theme_color_color', $data);
 $moduleClasses = '';
 
-
 if ($themeColor === 'custom') {
     $themeColor = ACF::getField('theme_color_custom_module_color', $data);
 }
@@ -45,7 +44,7 @@ if (!empty($imageId)) {
 
 ?>
 
-<div class="module content uk-container-large uk-margin-auto <?php echo 'content__align-' . $text_aligment . '' ?> <?php echo $moduleClasses ?>" uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-small; delay: 500">
+<div class="module content uk-container-large uk-margin-auto <?php echo 'content__align-' . $text_aligment . '' ?> <?php echo $moduleClasses ?> " uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-small; delay: 500">
     <?php
     if ($imageplacement === 'left' && !empty($imageId)) {
         echo $media;
