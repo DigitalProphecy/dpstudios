@@ -22,6 +22,7 @@ class Setup implements WordPressHooks
         add_action('upload_mimes', [$this, 'ccMimeTypes']);
         add_action('get_menu_id', [$this, 'getMenuId']);
         add_action('acf/init', [$this, 'my_acf_init']);
+        add_action('dps_excerpt', [$this, 'dps_the_excerpt']);
     }
 
     /**
@@ -68,5 +69,32 @@ class Setup implements WordPressHooks
     public function my_acf_init()
     {
         acf_update_setting('google_api_key', 'AIzaSyDo0w2mOfLYXGiKst-PsaP2Uk7GOPv9L8Q');
+    }
+
+    /**
+     * Display the post excerpt with optional character limit.
+     *
+     * @param int $trim_character_count The number of characters to limit the excerpt to. (Default: 0, no limit)
+     */
+    public function dps_the_excerpt($trim_character_count = 0)
+    {
+        // Check if the post has an excerpt or if the character count is set to 0 (no limit).
+        if (!has_excerpt() || 0 === $trim_character_count) {
+            // If there's no excerpt or no character limit, display the full excerpt.
+            the_excerpt();
+            return;
+        }
+
+        // Get the raw excerpt without any HTML tags using wp_strip_all_tags().
+        $excerpt = wp_strip_all_tags(get_the_excerpt());
+
+        // Trim the excerpt to the specified character count.
+        $excerpt = substr($excerpt, 0, $trim_character_count);
+
+        // Ensure the excerpt ends at the last space to avoid cutting off words.
+        $excerpt = substr($excerpt, 0, strrpos($excerpt, ' '));
+
+        // Output the trimmed excerpt with an ellipsis to indicate continuation.
+        echo $excerpt . '[...]';
     }
 }

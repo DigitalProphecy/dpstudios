@@ -1,5 +1,7 @@
 <?php
 
+use DPS\App\Helpers;
+
 /**
  * The main template file.
  *
@@ -12,27 +14,31 @@
  * @package DPS
  */
 
-get_header(); ?>
+$helpers = new Helpers;
 
-<div class="uk-container uk-container-large">
-    <div uk-grid>
-        <div id="primary" class="uk-width-3-4@s">
-            <?php
-            if (have_posts()) {
-                while (have_posts()) {
-                    the_post();
-                    // Loads the content/singular/page.php template.
-                    get_template_part('content/archive/content');
-                }
-            } else {
+get_header();
+?>
+
+<div class="uk-container entry">
+    <div class="uk-grid uk-child-width-1-2@m uk-child-width-1-3@l uk-text-center" uk-grid="masonry: true" uk-scrollspy="target: > article; cls: uk-animation-fade; delay: 300">
+        <?php
+        if (have_posts()) {
+            while (have_posts()) {
+                the_post();
                 // Loads the content/singular/page.php template.
-                get_template_part('content/content', 'none');
+                get_template_part('content/archive/content');
             }
-            ?>
-        </div>
-
-        <?php get_sidebar(); ?>
+        } else {
+            // Loads the content/singular/page.php template.
+            get_template_part('content/content', 'none');
+        }
+        ?>
     </div>
+    <?php
+    echo '<div class="container">';
+    $helpers->dps_pagination();
+    echo '</div>';
+    ?>
 </div>
 
 <?php get_footer();
