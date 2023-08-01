@@ -5,6 +5,7 @@ namespace DPS\App\Fields\FieldGroups;
 use WordPlate\Acf\Location;
 use DPS\App\Fields\Options\Branding;
 use DPS\App\Fields\Options\Footer;
+use DPS\App\Fields\Options\Posts;
 
 /**
  * Class SiteOptionsFieldGroup
@@ -40,6 +41,7 @@ class SiteOptionsFieldGroup extends RegisterFieldGroups
             array_merge(
                 (new Branding())->fields(),
                 (new Footer())->fields(),
+                (new Posts())->fields()
             )
         );
     }

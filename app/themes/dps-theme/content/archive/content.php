@@ -1,12 +1,23 @@
 <?php
 
-use DPS\App\Helpers;
-
 /**
  * @package DPS
  */
 
+use DPS\App\Helpers;
+use DPS\App\Media;
+
 $helpers = new Helpers;
+$fallback_images = get_field('fallback_post_images', 'option');
+
+if ($fallback_images) {
+    $index = array_rand($fallback_images);
+    $rand_row = $fallback_images[$index];
+    $rand_row_image = $rand_row['images']['id'];
+
+    $img_src = Media::getAttachmentByID($rand_row_image);
+}
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -16,12 +27,7 @@ $helpers = new Helpers;
             <?php the_post_thumbnail(); ?>
         </div>
     <?php else : ?>
-        <div class="entry__thumb">
-            <img src="<?php echo DPS_THEME_DIR . 'screenshot.png'; ?>" />
-            <?php
-            var_dump(DPS_THEME_DIR . 'screenshot.png');
-            ?>
-        </div>
+        <img src="<?php echo $img_src->url ?>" />
     <?php endif; ?>
 
     <header class="entry__header">
