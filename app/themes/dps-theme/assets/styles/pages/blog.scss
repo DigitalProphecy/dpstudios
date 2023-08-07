@@ -48,7 +48,7 @@
       padding: 5px 10px;
       text-decoration: none;
 
-      &:hover:not(.next) {
+      &:hover:not(.next, .prev) {
         background-color: $theme-orange;
         border: 1px solid $theme-darker-orange;
         color: $white;

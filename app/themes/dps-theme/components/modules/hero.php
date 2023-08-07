@@ -27,9 +27,9 @@ if ($hero_size === 'small') {
 ?>
 <div class="module hero <?php echo $hero_size_style; ?> uk-background-cover uk-height-large" uk-parallax="bgy: -200" <?php echo Util::getInlineBackgroundStyles($data); ?> uk-parallax="bgy: -200" uk-scrollspy="cls: uk-animation-fade; repeat: true">
     <div class="uk-container-large uk-margin-auto">
-        <div class="hero__content" uk-scrollspy="target: > div, a; cls: uk-animation-slide-left-small; delay: 500">
+        <div class="hero__content">
             <?php if ($sub_headline) : ?>
-                <div class="hero__sub-heading uk-margin-bottom uk-margin-medium-bottom@l">
+                <div class="hero__sub-heading uk-margin-bottom uk-margin-medium-bottom@l" data-aos="fade-right" data-aos-delay="500">
                     <?php
                     echo nl2br(Util::getHTML(
                         $sub_headline,
@@ -39,7 +39,7 @@ if ($hero_size === 'small') {
                     ?>
                 </div>
             <?php endif; ?>
-            <div class="hero__heading uk-margin-bottom uk-margin-medium-bottom@l">
+            <div class="hero__heading uk-margin-bottom uk-margin-medium-bottom@l" data-aos="fade-right" data-aos-delay="900">
                 <?php
                 echo nl2br(Util::getHTML(
                     $headline,
@@ -48,16 +48,19 @@ if ($hero_size === 'small') {
                 ));
                 ?>
             </div>
-            <div class="hero__body uk-margin-bottom uk-margin-medium-bottom@l">
+            <div class="hero__body uk-margin-bottom uk-margin-medium-bottom@l" data-aos="fade-right" data-aos-delay="1300">
                 <?php echo apply_filters('the_content', $content); ?>
             </div>
-            <?php echo Util::getButtonHTML($button); ?>
+            <div data-aos="fade-right" data-aos-delay="1600">
+                <?php echo Util::getButtonHTML($button); ?>
+            </div>
+
         </div>
     </div>
     <?php
     if (is_front_page()) {
         printf(
-            '<div class="hero__effect" uk-scrollspy="cls: uk-animation-slide-left; delay: 1600"></div>            ',
+            '<div class="hero__effect" data-aos="fade-right" data-aos-delay="1900""></div>            ',
             $effect_color_hex,
         );
     }
