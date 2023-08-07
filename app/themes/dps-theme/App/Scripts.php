@@ -43,6 +43,13 @@ class Scripts implements WordPressHooks
         );
 
         wp_enqueue_script(
+            'aos-js',
+            get_template_directory_uri() . "/node_modules/aos/dist/aos.js",
+            [],
+            true
+        );
+
+        wp_enqueue_script(
             'google-maps-api-js',
             "https://maps.googleapis.com/maps/api/js?key=AIzaSyDo0w2mOfLYXGiKst-PsaP2Uk7GOPv9L8Q=initMap",
             ['jquery'],
@@ -63,6 +70,13 @@ class Scripts implements WordPressHooks
         wp_enqueue_style(
             'dps-styles',
             get_template_directory_uri() . '/build/styles/theme-styles.min.css',
+            [],
+            THEME_VERSION
+        );
+
+        wp_enqueue_style(
+            'aos-styles',
+            get_template_directory_uri() . '/node_modules/aos/dist/aos.css',
             [],
             THEME_VERSION
         );
