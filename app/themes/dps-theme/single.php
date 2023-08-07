@@ -7,7 +7,11 @@
  */
 
 get_header(); ?>
-
+<div class="blog__hero" style="background-image: url('<?php echo get_the_post_thumbnail_url() ?>;')">
+    <div class="uk-container uk-margin-auto">
+        <h1><?php echo the_title(); ?></h1>
+    </div>
+</div>
 <div class="uk-container uk-container-large">
     <div uk-grid>
         <div id="primary" class="uk-width-full@s">

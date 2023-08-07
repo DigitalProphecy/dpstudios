@@ -14,11 +14,19 @@ use DPS\App\Helpers;
  * @package DPS
  */
 
+use DPS\App\Media;
+
 $helpers = new Helpers;
 
 get_header();
 ?>
 
+<div class="blog__hero" style="background-image: url('<?php echo get_the_post_thumbnail_url() ?>;')">
+    <div class="uk-container uk-margin-auto">
+        <h1><?php echo single_post_title(); ?></h1>
+    </div>
+
+</div>
 <div class="uk-container entry">
     <div class="uk-grid uk-child-width-1-2@m uk-child-width-1-3@l uk-text-center" uk-grid="masonry: true" uk-scrollspy="target: > article; cls: uk-animation-fade; delay: 300">
         <?php

@@ -11,7 +11,7 @@
         <?php the_title('<h1 class="hdg hdg--1">', '</h1>'); ?>
     </header><!-- .entry__header -->
 
-    <div class="entry__content">
+    <div class="entry__content" data-aos="fade-down" data-aos-delay="500">
         <?php
         the_content();
         wp_link_pages([
