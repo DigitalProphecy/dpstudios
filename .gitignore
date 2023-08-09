@@ -18,6 +18,7 @@ wp
 app/uploads/*
 app/plugins/*
 !app/plugins/gravityforms
+!app/plugins/bv-pantheon-migration
 app/themes/mc-wp-starter-theme
 app/themes/twentytwentyone
 app/themes/twentytwentythree
