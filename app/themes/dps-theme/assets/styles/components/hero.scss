@@ -117,4 +117,7 @@
       font-size: 110px;
     }
   }
+  & > div:not(.hero__effect) {
+    width: 100%;
+  }
 }

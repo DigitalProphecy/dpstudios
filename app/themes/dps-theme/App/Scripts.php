@@ -36,7 +36,7 @@ class Scripts implements WordPressHooks
 
         wp_enqueue_script(
             'ui-kit-js',
-            get_template_directory_uri() . "/node_modules/uikit/dist/js/uikit.min.js",
+            "https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit.min.js",
             ['jquery'],
             THEME_VERSION,
             true
@@ -44,8 +44,8 @@ class Scripts implements WordPressHooks
 
         wp_enqueue_script(
             'aos-js',
-            get_template_directory_uri() . "/node_modules/aos/dist/aos.js",
-            [],
+            "https://unpkg.com/aos@next/dist/aos.js",
+            ['jquery'],
             true
         );
 
@@ -76,7 +76,7 @@ class Scripts implements WordPressHooks
 
         wp_enqueue_style(
             'aos-styles',
-            get_template_directory_uri() . '/node_modules/aos/dist/aos.css',
+            'https://unpkg.com/aos@next/dist/aos.css',
             [],
             THEME_VERSION
         );
