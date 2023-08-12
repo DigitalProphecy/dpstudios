@@ -23,12 +23,12 @@ if (!$title) {
 
 <div class="module item-slider <?php echo $bg_styles; ?>">
     <div class="uk-container-large uk-margin-auto">
-        <div class="item-slider__cols" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
-            <div class="item-slider__content module__content">
+        <div class="item-slider__cols">
+            <div class="item-slider__content module__content" data-aos="fade-right">
                 <h2><?php echo $title; ?></h2>
                 <p><?php echo $copy; ?></p>
             </div>
-            <div class="item-slider__item-list">
+            <div class="item-slider__item-list" data-aos="fade-left">
                 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="clsActivated: uk-transition-active; center: true">
                     <ul class="uk-slider-items uk-child-width-1-2@s uk-grid">
                         <?php foreach ($items as $item) :

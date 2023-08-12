@@ -50,6 +50,13 @@ class Scripts implements WordPressHooks
         );
 
         wp_enqueue_script(
+            'fontawesome',
+            "https://kit.fontawesome.com/36d832afa0.js",
+            ['jquery'],
+            true
+        );
+
+        wp_enqueue_script(
             'google-maps-api-js',
             "https://maps.googleapis.com/maps/api/js?key=AIzaSyDo0w2mOfLYXGiKst-PsaP2Uk7GOPv9L8Q=initMap",
             ['jquery'],

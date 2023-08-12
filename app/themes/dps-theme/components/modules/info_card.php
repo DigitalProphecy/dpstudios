@@ -20,7 +20,7 @@ $link = ACF::getField('content_section_cta_link', $data);
 
 <div class="module info_card <?php echo $bgColorClass; ?>">
     <div class="<?php echo 'info_card--' . $moduleAligment; ?> uk-container-large uk-margin-auto">
-        <div class="info_card__content module__content" uk-scrollspy="target: > h2,p; cls: uk-animation-fade; delay: 500">
+        <div class="info_card__content module__content" data-aos="fade-right">
             <?php
             printf(
                 '
@@ -36,7 +36,7 @@ $link = ACF::getField('content_section_cta_link', $data);
             );
             ?>
         </div>
-        <div class="info_card__items uk-flex" uk-scrollspy="target: > div; cls: uk-animation-slide-left-small; delay: 500">
+        <div class="info_card__items uk-flex">
             <?php
             foreach ($items as $item) {
                 $icon_image = ACF::getField('icon_image', $item);
@@ -46,7 +46,7 @@ $link = ACF::getField('content_section_cta_link', $data);
 
                 printf(
                     '
-                    <div class="info_card__item">
+                    <div class="info_card__item" data-aos="fade-left" data-aos-delay="300">
                         <div class="info_card__item-icon">
                         <img src="%1$s" width="40" height="40" uk-svg>
                         </div>

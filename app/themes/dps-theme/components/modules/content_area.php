@@ -25,7 +25,7 @@ if (!empty($imageId)) {
     $image = wp_get_attachment_image_src($imageId, 'full');
     $no_effect = ACF::getField('theme_color_remove_background_effect', $data);
     $media = '
-        <div class="uk-position-relative">
+        <div class="uk-position-relative" data-aos="fade-up">
             <div class="content__media uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="' . $image[0] . '" style="
             background-color: ' . $themeColor . '" uk-img></div>
             <div class="content__media-effect" style="
@@ -44,13 +44,13 @@ if (!empty($imageId)) {
 
 ?>
 
-<div class="module content uk-container-large uk-margin-auto <?php echo 'content__align-' . $text_aligment . '' ?> <?php echo $moduleClasses ?> " uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-small; delay: 500">
+<div class="module content uk-container-large uk-margin-auto <?php echo 'content__align-' . $text_aligment . '' ?> <?php echo $moduleClasses ?>">
     <?php
     if ($imageplacement === 'left' && !empty($imageId)) {
         echo $media;
     }
     ?>
-    <div class="content__content">
+    <div class="content__content" data-aos="fade-down">
         <div class="content__heading">
             <?php
             echo nl2br(Util::getHTML(

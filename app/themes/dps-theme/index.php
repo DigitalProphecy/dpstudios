@@ -25,10 +25,9 @@ get_header();
     <div class="uk-container uk-margin-auto">
         <h1><?php echo single_post_title(); ?></h1>
     </div>
-
 </div>
 <div class="uk-container entry">
-    <div class="uk-grid uk-child-width-1-2@m uk-child-width-1-3@l uk-text-center" uk-grid="masonry: true" uk-scrollspy="target: > article; cls: uk-animation-fade; delay: 300">
+    <div class="uk-grid uk-child-width-1-2@m uk-child-width-1-3@l uk-text-center" uk-grid="masonry: true" data-aos="fade-up">
         <?php
         if (have_posts()) {
             while (have_posts()) {

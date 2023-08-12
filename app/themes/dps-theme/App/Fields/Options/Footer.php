@@ -2,6 +2,7 @@
 
 namespace DPS\App\Fields\Options;
 
+use DPS\App\Fields\Common;
 use WordPlate\Acf\Fields\Group;
 use WordPlate\Acf\Fields\Tab;
 use WordPlate\Acf\Fields\Image;
@@ -42,7 +43,7 @@ class Footer
                     ]),
                 Repeater::make(__('Footer Social', 'dps-starter'))
                     ->fields([
-                        Image::make(__('icon', 'dps-starter')),
+                        Common::FaIcons(),
                         Textarea::make(__('Social Item URL', 'dps-starter'))
                             ->rows(1)
                     ])

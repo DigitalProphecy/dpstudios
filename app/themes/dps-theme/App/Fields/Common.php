@@ -125,4 +125,27 @@ class Common
                 Forms::make(__('Form Select', 'dps-starter'))
             ]);
     }
+
+    /**
+     * Font Awesome Icons List
+     * 
+     */
+
+    public static function FaIcons()
+    {
+        return Group::make(__('Font Awesome Icons', 'norzo'))
+            ->fields([
+                Select::make(__('Icons', 'norzo'))
+                    ->choices([
+                        'fa-facebook-f'             => 'Facebook',
+                        'fa-twitter'                => 'Twitter',
+                        'fa-instagram'              => 'Instagram',
+                        'fa-linkedin-in'            => 'Linkedin',
+                        'fa-youtube'                => 'Youtube',
+                        'fa-envelope'               => 'Envelope',
+                        'fa-clock'                  => 'Clock',
+                        'fa-headset'                => 'Headset',
+                    ])
+            ]);
+    }
 }
