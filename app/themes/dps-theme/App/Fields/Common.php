@@ -137,14 +137,20 @@ class Common
             ->fields([
                 Select::make(__('Icons', 'norzo'))
                     ->choices([
-                        'fa-facebook-f'             => 'Facebook',
-                        'fa-twitter'                => 'Twitter',
-                        'fa-instagram'              => 'Instagram',
-                        'fa-linkedin-in'            => 'Linkedin',
-                        'fa-youtube'                => 'Youtube',
-                        'fa-envelope'               => 'Envelope',
-                        'fa-clock'                  => 'Clock',
-                        'fa-headset'                => 'Headset',
+                        'fa-brands fa-facebook-f'               => 'Facebook',
+                        'fa-brands fa-twitter'                  => 'Twitter',
+                        'fa-brands fa-instagram'                => 'Instagram',
+                        'fa-brands fa-linkedin-in'              => 'Linkedin',
+                        'fa-brands fa-youtube'                  => 'Youtube',
+                        'fa-brands fa-envelope'                 => 'Envelope',
+                        'fa-brands fa-clock'                    => 'Clock',
+                        'fa-brands fa-headset'                  => 'Headset',
+                        'fa-brands fa-wordpress-simple'         => 'WordPress',
+                        'fa-regular fa-laptop-mobile'           => 'Responsive',
+                        'fa-regular fa-head-side-goggles'       => 'XR',
+                        'fa-regular fa-code' => 'Coding',
+                        'fa-regular fa-object-group' => 'Design',
+                        'fa-regular fa-magnifying-glass-location' => 'SEO',
                     ])
             ]);
     }

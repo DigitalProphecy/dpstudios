@@ -44,7 +44,7 @@ class InfoCard extends Layouts
                         ]),
                     Repeater::make(__('Items', 'dps-starter'))
                         ->fields([
-                            Image::make(__('Icon Image', 'dps-starter')),
+                            Common::FaIcons(),
                             Textarea::make(__('Icon Header', 'dps-starter'))
                                 ->rows(1),
                             Textarea::make(__('Icon Content', 'dps-starter'))

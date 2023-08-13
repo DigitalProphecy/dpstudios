@@ -24,10 +24,8 @@
     text-align: center;
     width: 100%;
 
-    &-icon {
-      height: 87px;
-      margin: 0 auto;
-      width: 87px;
+    & > i {
+      font-size: 50px;
     }
   }
 
