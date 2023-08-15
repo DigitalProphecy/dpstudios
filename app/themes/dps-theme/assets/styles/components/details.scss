@@ -1,0 +1,35 @@
+.details {
+  font-family: $robotoCon, sans-serif;
+
+  &__col-1 {
+    span {
+      color: $theme-orange;
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    h3 {
+      p {
+        font-family: $oswald, sans-serif;
+        line-height: 45px;
+      }
+    }
+  }
+
+  &__col-2 {
+    span {
+      font-size: 18px;
+    }
+  }
+
+  &__col-2-cats {
+    display: grid;
+
+    span {
+      transition: all ease-in-out 0.3s;
+      &:hover {
+        color: $theme-orange;
+      }
+    }
+  }
+}

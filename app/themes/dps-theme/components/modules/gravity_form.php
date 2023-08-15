@@ -10,7 +10,7 @@ use DPS\App\Fields\ACF;
 use DPS\App\Media;
 
 
-$module_heading = ACF::getField('content_heading_module_heading', $data);
+$module_heading = ACF::getField('contact_heading_module_heading', $data);
 $form_headline = ACF::getField('contact_info_content_heading', $data);
 $form_body_copy = ACF::getField('contact_info_content_body', $data);
 $gf_id = ACF::getField('contact_form_gravity_from_id', $data);
@@ -22,7 +22,7 @@ $social_icons = ACF::getRowsLayout('contact_info_social_icons', $data);
 
 <div class="module gform" style="background-image: url('<?php echo $img_src; ?>')">
     <div class="uk-container uk-margin-auto">
-        <div class="gform__heading">
+        <div class="gform__heading" data-aos="fade-up" data-aos-delay="300">
             <h2>
                 <?php printf(
                     '%1$s',
@@ -31,12 +31,12 @@ $social_icons = ACF::getRowsLayout('contact_info_social_icons', $data);
                 ?>
             </h2>
         </div>
-        <div class="gform__cols">
-            <div class="gform__form">
+        <div class="gform__cols" data-aos="fade-up" data-aos-delay="500">
+            <div class="gform__form" data-aos="fade-up" data-aos-delay="700">
                 <h3>Send us a message</h3>
                 <?php gravity_form($gf_id, false, false, false, '', false); ?>
             </div>
-            <div class="gform__copy">
+            <div class="gform__copy" data-aos="fade-up" data-aos-delay="700">
 
                 <div class="gform__info">
                     <h3>Contact Us</h3>
@@ -59,7 +59,7 @@ $social_icons = ACF::getRowsLayout('contact_info_social_icons', $data);
                     echo '</div>';
                     ?>
                 </div>
-                <div class="gform__social">
+                <div class="gform__social" data-aos="fade-up" data-aos-delay="700">
                     <h3>Follow Us</h3>
                     <?php
                     echo '<div class="gform__social-icons">';

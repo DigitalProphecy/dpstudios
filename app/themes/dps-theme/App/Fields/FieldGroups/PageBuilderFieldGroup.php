@@ -11,6 +11,7 @@ use DPS\App\Fields\Layouts\GravityForm;
 use DPS\App\Fields\Layouts\ImageGrid;
 use DPS\App\Fields\Layouts\InfoCard;
 use DPS\App\Fields\Layouts\ItemSlider;
+use DPS\App\Fields\Layouts\Details;
 use DPS\App\Fields\Layouts\ProjectList;
 use WordPlate\Acf\Location;
 use WordPlate\Acf\Fields\FlexibleContent;
@@ -58,6 +59,7 @@ class PageBuilderFieldGroup extends RegisterFieldGroups
                     (new ImageGrid())->fields(),
                     (new ProjectList())->fields(),
                     (new GravityForm())->fields(),
+                    (new Details())->fields(),
                 ])
         ]);
     }

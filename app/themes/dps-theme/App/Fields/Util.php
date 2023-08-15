@@ -159,4 +159,37 @@ class Util
 
         return $output;
     }
+
+    // Gets the Project Type catepories
+    public static function ProjectCategories()
+    {
+        $args = array(
+            'public'   => true,
+            '_builtin' => false
+        );
+
+        $output = 'names';
+        $operator = 'and';
+
+        $taxonomies = get_taxonomies($args, $output, $operator);
+
+        if ($taxonomies) {
+            foreach ($taxonomies as $taxonomy) {
+                $terms = get_terms($taxonomy);
+
+                foreach ($terms as $term) {
+                    $termSlug = $term->slug;
+                    $termName = $term->name;
+
+                    printf(
+                        '<li uk-filter-control="[data-type=%1$s]">
+                                 <a href="#">%2$s</a>
+                                </li>',
+                        $termSlug,
+                        $termName
+                    );
+                }
+            }
+        }
+    }
 }

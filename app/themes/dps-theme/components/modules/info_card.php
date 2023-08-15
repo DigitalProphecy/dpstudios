@@ -16,7 +16,6 @@ $items = ACF::getRowsLayout('items', $data);
 $bgColorClass = ACF::getField('module_background_color_background_color', $data);
 $moduleAligment = ACF::getField('module_alignment',  $data);
 $link = ACF::getField('content_section_cta_link', $data);
-
 ?>
 
 <div class="module info_card <?php echo $bgColorClass; ?>">

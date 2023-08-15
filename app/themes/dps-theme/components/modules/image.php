@@ -15,14 +15,13 @@ $img_src = Media::getAttachmentByID($image);
 $custom_bg = ACF::getField('background_custom-bg', $data);
 $full_width_img = ACF::getField('background_full_width_image', $data);
 $bg_styles = "";
+$bg_width = "";
 
-if (!empty($custom_bg)) {
-    $bg_styles = "background-color:" . $custom_bg . "; background-image: url(" . $img_src->url . ");";
-}
 if (!$image) {
     return;
 }
 ?>
 
-<div class="module image" style="<?php echo $bg_styles; ?>" uk-scrollspy="cls: uk-animation-fade; delay: 500">
+<div class="uk-container uk-margin-auto">
+    <img src="<?php echo $img_src->url ?>" data-aos="fade-down">
 </div>

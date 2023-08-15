@@ -17,11 +17,10 @@
 
   // Card Item Children
   &__item {
-    border-radius: 8px;
     display: grid;
     gap: 20px;
-    padding: 50px;
-    text-align: center;
+    padding: 40px;
+    text-align: left;
     width: 100%;
 
     & > i {
@@ -74,7 +73,7 @@
   }
 
   &--transparent {
-    background-color: transparent;
+    background-color: lightgray;
     color: $theme-black;
 
     .info_card__item-icon {
@@ -90,8 +89,26 @@
     }
 
     .info_card__item {
-      background-color: $theme-black;
+      background-color: $white;
       color: $white;
+      transition: all ease-in-out 0.3s;
+
+      &:hover {
+        background-color: $theme-orange;
+        color: $white;
+        i {
+          color: $white;
+        }
+      }
+
+      i {
+        color: $theme-orange;
+      }
+
+      h4,
+      p {
+        color: $theme-black;
+      }
     }
 
     .info_card__cta {
@@ -115,7 +132,15 @@
     }
 
     .info_card__item {
-      background-color: $theme-blue;
+      background-color: $white;
+
+      i {
+        color: $theme-navy-blue;
+      }
+
+      h4 {
+        color: $theme-black;
+      }
     }
 
     .info_card__cta {
