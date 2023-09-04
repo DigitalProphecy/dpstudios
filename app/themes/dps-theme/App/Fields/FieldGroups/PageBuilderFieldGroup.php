@@ -13,6 +13,7 @@ use DPS\App\Fields\Layouts\InfoCard;
 use DPS\App\Fields\Layouts\ItemSlider;
 use DPS\App\Fields\Layouts\Details;
 use DPS\App\Fields\Layouts\ProjectList;
+use DPS\App\Fields\Layouts\FiftyFiftyImage;
 use WordPlate\Acf\Location;
 use WordPlate\Acf\Fields\FlexibleContent;
 
@@ -60,6 +61,7 @@ class PageBuilderFieldGroup extends RegisterFieldGroups
                     (new ProjectList())->fields(),
                     (new GravityForm())->fields(),
                     (new Details())->fields(),
+                    (new FiftyFiftyImage())->fields(),
                 ])
         ]);
     }

@@ -4,6 +4,7 @@ namespace DPS\App\Fields\Layouts;
 
 use WordPlate\Acf\Fields\Group;
 use WordPlate\Acf\Fields\Layout;
+use WordPlate\Acf\Fields\PostObject;
 use WordPlate\Acf\Fields\Relationship;
 use WordPlate\Acf\Fields\WysiwygEditor;
 use WordPlate\Acf\Fields\Textarea;
@@ -31,15 +32,10 @@ class ProjectList extends Layouts
                     Group::make(__('Project List', 'dps-starter'))
                         ->instructions('Add the text value')
                         ->fields([
-                            Relationship::make(__('Item Object', 'dps-starter'))
+                            PostObject::make(__('Item Object', 'dps-starter'))
                                 ->instructions('Add the contacts.')
                                 ->postTypes(['project'])
-                                ->filters([
-                                    'search',
-                                    'post_type',
-                                    'taxonomy'
-                                ])
-                                ->elements(['featured_image'])
+                                ->allowMultiple()
                                 ->returnFormat('object'), // id or object (default)
                         ]),
 

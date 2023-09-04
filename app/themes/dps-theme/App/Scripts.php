@@ -9,6 +9,14 @@ use DPS\App\Interfaces\WordPressHooks;
  *
  * @package DPS\App
  */
+if (!defined('DPS_DIR_PATH')) {
+    define('DPS_DIR_PATH', untrailingslashit(get_template_directory()));
+}
+
+if (!defined('DPS_DIR_URI')) {
+    define('DPS_DIR_URI', untrailingslashit(get_template_directory_uri()));
+}
+
 class Scripts implements WordPressHooks
 {
 
@@ -28,7 +36,7 @@ class Scripts implements WordPressHooks
     {
         wp_enqueue_script(
             'dps-theme',
-            get_template_directory_uri() . "/build/scripts/theme-scripts.min.js",
+            DPS_DIR_URI . "/build/scripts/theme-scripts.min.js",
             ['jquery'],
             THEME_VERSION,
             true
@@ -64,10 +72,19 @@ class Scripts implements WordPressHooks
             true
         );
 
+        wp_enqueue_script(
+            'isotope',
+            "https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js",
+            ['jquery'],
+            THEME_VERSION,
+            true
+        );
+
         if (is_singular() && comments_open() && get_option('thread_comments')) {
             wp_enqueue_script('comment-reply');
         }
     }
+
 
     /**
      * Load stylesheets for the front end.
@@ -76,7 +93,7 @@ class Scripts implements WordPressHooks
     {
         wp_enqueue_style(
             'dps-styles',
-            get_template_directory_uri() . '/build/styles/theme-styles.min.css',
+            DPS_DIR_URI . '/build/styles/theme-styles.min.css',
             [],
             THEME_VERSION
         );

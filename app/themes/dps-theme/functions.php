@@ -23,7 +23,7 @@ use DPS\App\Fields\FieldGroups\PageBuilderFieldGroup;
  * Define Theme Version
  * Define Theme directories
  */
-define('THEME_VERSION', '1.0.8');
+define('THEME_VERSION', '1.0.9');
 define('DPS_THEME_DIR', trailingslashit(get_template_directory()));
 define('DPS_THEME_PATH_URL', trailingslashit(get_template_directory_uri()));
 

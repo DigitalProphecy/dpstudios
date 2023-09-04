@@ -43,30 +43,32 @@ if (!empty($imageId)) {
 
 
 ?>
+<div class="uk-container-large uk-margin-auto">
+    <div class="module content <?php echo 'content__align-' . $text_aligment . '' ?> <?php echo $moduleClasses ?>">
 
-<div class="module content uk-container-large uk-margin-auto <?php echo 'content__align-' . $text_aligment . '' ?> <?php echo $moduleClasses ?>">
-    <?php
-    if ($imageplacement === 'left' && !empty($imageId)) {
-        echo $media;
-    }
-    ?>
-    <div class="content__content" data-aos="fade-down">
-        <div class="content__heading">
-            <?php
-            echo nl2br(Util::getHTML(
-                $headline,
-                'h2',
-                ['class' => 'content__title hdg hdg--2']
-            ));
-            ?>
+        <?php
+        if ($imageplacement === 'left' && !empty($imageId)) {
+            echo $media;
+        }
+        ?>
+        <div class="content__content">
+            <div class="content__heading" data-aos="fade-down">
+                <?php
+                echo nl2br(Util::getHTML(
+                    $headline,
+                    'h2',
+                    ['class' => 'content__title hdg hdg--2']
+                ));
+                ?>
+            </div>
+            <div class="content__body" data-aos="fade-up">
+                <?php echo apply_filters('the_content', $content); ?>
+            </div>
         </div>
-        <div class="content__body">
-            <?php echo apply_filters('the_content', $content); ?>
-        </div>
+        <?php
+        if ($imageplacement === 'right' && !empty($imageId)) {
+            echo $media;
+        }
+        ?>
     </div>
-    <?php
-    if ($imageplacement === 'right' && !empty($imageId)) {
-        echo $media;
-    }
-    ?>
 </div>

@@ -22,6 +22,6 @@ if (!$image) {
 }
 ?>
 
-<div class="uk-container uk-margin-auto">
+<div class="image module uk-container-large uk-margin-auto">
     <img src="<?php echo $img_src->url ?>" data-aos="fade-down">
 </div>

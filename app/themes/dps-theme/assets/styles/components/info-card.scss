@@ -1,5 +1,6 @@
 .info_card {
   // Card Item Parent
+  padding: 80px 0;
   &__items {
     display: grid;
     gap: 50px;
@@ -21,6 +22,7 @@
     gap: 20px;
     padding: 40px;
     text-align: left;
+    transition: all ease-in-out 0.3s;
     width: 100%;
 
     & > i {
@@ -93,16 +95,16 @@
       color: $white;
       transition: all ease-in-out 0.3s;
 
+      i {
+        color: $theme-orange;
+      }
+
       &:hover {
         background-color: $theme-orange;
         color: $white;
         i {
           color: $white;
         }
-      }
-
-      i {
-        color: $theme-orange;
       }
 
       h4,

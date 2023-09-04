@@ -2,9 +2,10 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  min-height: 600px;
+  margin-bottom: 80px;
   padding-left: 30px;
   padding-right: 30px;
+  padding-top: 80px;
   position: relative;
 
   @media (min-width: $breakpoint-large) {

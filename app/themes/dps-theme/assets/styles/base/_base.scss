@@ -11,12 +11,6 @@ body {
 }
 
 .module {
-  padding: 50px 0;
-
-  @media (min-width: $breakpoint-medium) {
-    padding: 80px 0;
-  }
-
   &__content {
     align-content: center;
     display: grid;

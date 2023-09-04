@@ -1,0 +1,24 @@
+.fifty-fifty-image {
+  padding-left: 30px;
+  padding-right: 30px;
+
+  &__wrap {
+    display: grid;
+    gap: 30px;
+
+    @media (min-width: $breakpoint-medium) {
+      display: flex;
+      gap: 70px;
+    }
+
+    &-item {
+      background-size: cover;
+      height: 300px;
+      width: 100%;
+
+      @media (min-width: $breakpoint-medium) {
+        height: 500px;
+      }
+    }
+  }
+}
