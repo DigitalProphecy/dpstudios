@@ -40,7 +40,14 @@ $link = ACF::getField('content_section_cta_link', $data);
             foreach ($items as $item) {
                 $icon_header = ACF::getField('icon_header', $item);
                 $icon_content = ACF::getField('icon_content', $item);
+                $card_icon = '';
                 $icon = ACF::getField('font_awesome_icons_icons', $item);
+
+                if ($icon == 'custom') {
+                    $card_icon = ACF::getField('font_awesome_icons_custom_icon_class', $item);
+                } else {
+                    $card_icon = $icon;
+                }
 
                 printf(
                     '
@@ -50,7 +57,7 @@ $link = ACF::getField('content_section_cta_link', $data);
                         <div><p>%3$s</p></div>
                     </div>
                     ',
-                    $icon,
+                    $card_icon,
                     $icon_header,
                     $icon_content,
                 );

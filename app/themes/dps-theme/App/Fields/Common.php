@@ -10,7 +10,7 @@ use WordPlate\Acf\Fields\Group;
 use WordPlate\Acf\Fields\Image;
 use WordPlate\Acf\Fields\Range;
 use WordPlate\Acf\Fields\Select;
-use WordPlate\Acf\Fields\Number;
+use WordPlate\Acf\Fields\Text;
 use WordPlate\Acf\Fields\Forms;
 use WordPlate\Acf\Fields\Textarea;
 use WordPlate\Acf\Fields\TrueFalse;
@@ -133,9 +133,9 @@ class Common
 
     public static function FaIcons()
     {
-        return Group::make(__('Font Awesome Icons', 'norzo'))
+        return Group::make(__('Font Awesome Icons', 'dps-starter'))
             ->fields([
-                Select::make(__('Icons', 'norzo'))
+                Select::make(__('Icons', 'dps-starter'))
                     ->choices([
                         'fa-brands fa-facebook-f'               => 'Facebook',
                         'fa-brands fa-twitter'                  => 'Twitter',
@@ -151,7 +151,12 @@ class Common
                         'fa-regular fa-code' => 'Coding',
                         'fa-regular fa-object-group' => 'Design',
                         'fa-regular fa-magnifying-glass-location' => 'SEO',
-                    ])
+                        'custom' => 'Custom Font Awesome Icon'
+                    ]),
+                Text::make(__('Custom Icon Class', 'dps-starter'))
+                    ->conditionalLogic([
+                        ConditionalLogic::if('icons')->equals('custom')
+                    ]),
             ]);
     }
 }
