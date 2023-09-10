@@ -26,7 +26,7 @@ if (!$image_grid) {
 </style>
 
 <div class="module image_grid">
-    <div class="uk-container-full uk-margin-auto">
+    <div class="uk-container-large uk-margin-auto">
         <ul class="uk-child-width-full uk-child-width-1-3@m uk-text-center" uk-grid="masonry: true" uk-scrollspy="target: > li; cls: uk-animation-slide-bottom-small; delay: 500">
             <?php
             foreach ($image_grid as $image) {

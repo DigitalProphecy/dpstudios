@@ -7,6 +7,7 @@ use WordPlate\Acf\Fields\Repeater;
 use WordPlate\Acf\Fields\Image;
 use WordPlate\Acf\Fields\Select;
 use WordPlate\Acf\Fields\Textarea;
+use WordPlate\Acf\Fields\TrueFalse;
 
 /**
  * Class ImageGrid
@@ -40,6 +41,8 @@ class ImageGrid extends Layouts
                     $this->customOptionTab('Module Settings'),
                     Textarea::make(__('Module Color', 'dps-starter'))
                         ->rows(1),
+                    TrueFalse::make(__('Module Width', 'dps-starter'))
+                        ->stylisedUi(),
                 ])
         );
     }
