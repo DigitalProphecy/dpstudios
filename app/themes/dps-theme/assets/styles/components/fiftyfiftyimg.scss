@@ -1,7 +1,5 @@
 .fifty-fifty-image {
-  padding-left: 30px;
-  padding-right: 30px;
-
+  overflow-x: hidden;
   &__wrap {
     display: grid;
     gap: 30px;

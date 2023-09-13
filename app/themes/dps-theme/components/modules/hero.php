@@ -24,8 +24,9 @@ if ($hero_size === 'small') {
 } else {
 }
 
+Util::ModuleMargin($data, $label = 'settings', $module_id = 'hero');
 ?>
-<div class="module hero <?php echo $hero_size_style; ?> uk-background-cover uk-height-large" uk-parallax="bgy: -200" <?php echo Util::getInlineBackgroundStyles($data); ?> uk-parallax="bgy: -200" uk-scrollspy="cls: uk-animation-fade; repeat: true">
+<div id="hero" class="module hero <?php echo $hero_size_style; ?> uk-background-cover uk-height-large" uk-parallax="bgy: -200" <?php echo Util::getInlineBackgroundStyles($data); ?> uk-parallax="bgy: -200" uk-scrollspy="cls: uk-animation-fade; repeat: true">
     <div class="uk-container-large uk-margin-auto">
         <div class="hero__content">
             <?php if ($sub_headline) : ?>

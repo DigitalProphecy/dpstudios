@@ -1,8 +1,9 @@
 .image {
   height: auto;
-  margin-bottom: 80px;
 
   img {
+    margin-bottom: -3px;
+    position: relative;
     width: 100%;
   }
 }

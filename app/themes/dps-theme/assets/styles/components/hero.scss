@@ -2,7 +2,6 @@
   align-content: center;
   display: grid;
   height: 40vh;
-  margin-bottom: 80px;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -101,7 +100,7 @@
       font-size: 71px;
     }
 
-    @media (min-width: $breakpoint-medium) {
+    @media (min-width: $breakpoint-large) {
       height: 60vh;
 
       h1 {

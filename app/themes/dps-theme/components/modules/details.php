@@ -18,13 +18,13 @@ $post = get_post();
 ?>
 
 <div class="uk-container-large uk-margin-auto">
-    <div class="module details">
-        <div class="uk-flex uk-flex-between">
-            <div class="details__col-1 uk-width-1-2">
+    <div class="module details spaces">
+        <div class="details--container">
+            <div class="details__col-1 uk-width-1-2@l uk-width-1-1@m">
                 <span class="" data-aos="fade-right"><?php echo __($project_detail_field); ?></span>
                 <h3 class="uk-margin-top" data-aos="fade-right"><?php echo apply_filters('the_content', $project_solgan); ?></h3>
             </div>
-            <div class="details__col-2 uk-width-1-2">
+            <div class="details__col-2 uk-width-1-2@l uk-width-1-1@m">
                 <div class="uk-flex uk-flex-between">
                     <div class="">
                         <h4 class="uk-margin-bottom" data-aos="fade-up" data-aos-delay="300">Category</h4>

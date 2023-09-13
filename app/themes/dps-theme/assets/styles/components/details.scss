@@ -1,8 +1,14 @@
 .details {
   font-family: $robotoCon, sans-serif;
-  margin-bottom: 80px;
-  padding-left: 30px;
-  padding-right: 30px;
+
+  &--container {
+    display: block;
+
+    @media (min-width: $breakpoint-medium) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 
   &__col-1 {
     span {
@@ -12,7 +18,11 @@
     }
 
     h3 {
-      padding-right: 100px;
+      margin-bottom: 30px;
+      @media (min-with: $breakpoint-medium) {
+        margin-bottom: 0;
+        padding-right: 100px;
+      }
       p {
         font-family: $oswald, sans-serif;
         line-height: 45px;
@@ -21,6 +31,9 @@
   }
 
   &__col-2 {
+    & > div {
+      gap: 20px;
+    }
     span {
       font-size: 18px;
     }

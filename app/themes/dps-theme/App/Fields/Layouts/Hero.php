@@ -98,7 +98,8 @@ class Hero extends Layouts
                                     'large' => 'Large',
                                     'medium' => 'Medium',
                                     'small' => 'Small'
-                                ])
+                                ]),
+                            Common::marginGroup()
                         ])
                 ])
         );

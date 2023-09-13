@@ -58,6 +58,48 @@ class Util
         return $self_closing ? '<' . $element . $atts_output . ' />' : '<' . $element . $atts_output . '>' . $data . '</' . $element . '>';
     }
 
+    /**
+     * Displays custom module margin based on provided data
+     *
+     * @param $data - The data used to determine the margin values
+     * @param $label - Label to identify the settings (default: 'settings')
+     * @param $module_id - The HTML element ID to apply the margin to (default: 'module_id')
+     * 
+     * @return string - The generated CSS for module margin
+     */
+    public static function ModuleMargin($data, $label = 'settings', $module_id = 'module_id')
+    {
+        // Get the desktop margin value from ACF
+        $dkp_margin_val = ACF::getField($label . '_margin_desktop_dps-starter', $data);
+
+        // Get the mobile margin value from ACF
+        $mob_margin_val = ACF::getField($label . '_margin_mobile_dps-starter', $data);
+
+        // Generate CSS styles for module margin based on media queries
+        $moduleMarginOutput = printf(
+            '<style>
+        @media screen and (max-width: 2560px) {
+            #%1$s {
+                margin-bottom: %2$spx;
+            }
+        }
+
+        @media screen and (max-width: 425px) {
+            #%1$s {
+                margin-bottom: %3$spx;
+            }
+        }
+        </style>',
+            $module_id,
+            $dkp_margin_val,
+            $mob_margin_val
+        );
+
+        // Return the generated CSS for module margin
+        return $moduleMarginOutput;
+    }
+
+
 
     /**
      * Helper/wrapper function that makes dealing with ACF image objects easier.

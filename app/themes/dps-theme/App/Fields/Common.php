@@ -23,7 +23,7 @@ class Common
      * @param  string $label
      * @return void
      */
-    public static function marginGroup($label = 'Margin',  $defaults = [3, 3])
+    public static function marginGroup($label = 'Margin',  $defaults = [0, 0])
     {
         return Group::make(__($label, 'dps-starter'))
             ->layout('block')
@@ -31,28 +31,30 @@ class Common
                 Group::make(__('Mobile', 'dps-starter'))
                     ->layout('block')
                     ->fields([
-                        Range::make('Top')
+                        Range::make('Bottom', 'dps-starter')
                             ->min(0)
-                            ->max(10)
-                            ->step(0.5)
+                            ->max(200)
+                            ->step(15)
                             ->DefaultValue($defaults[0])
-                            ->wrapper([
-                                'width' => '50'
-                            ])
-                            ->append('rem'),
+                            ->append('px'),
+                    ])
+
+                    ->wrapper([
+                        'width' => '50'
                     ]),
                 Group::make(__('Desktop', 'dps-starter'))
                     ->layout('block')
                     ->fields([
-                        Range::make('Top')
+                        Range::make('Bottom', 'dps-starter')
                             ->min(0)
-                            ->max(10)
-                            ->step(0.5)
+                            ->max(200)
+                            ->step(15)
                             ->DefaultValue($defaults[1])
-                            ->wrapper([
-                                'width' => '50'
-                            ])
-                            ->append('rem')
+                            ->append('px')
+                    ])
+
+                    ->wrapper([
+                        'width' => '50'
                     ]),
             ]);
     }

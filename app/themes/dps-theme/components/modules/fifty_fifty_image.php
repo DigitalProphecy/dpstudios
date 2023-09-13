@@ -24,7 +24,7 @@ $img_col_2_url = $img_col_2_obj->url;
 
 ?>
 
-<div class="module fifty-fifty-image">
+<div class="module fifty-fifty-image spaces">
     <div class="uk-container-large uk-margin-auto">
         <div class="fifty-fifty-image__wrap">
             <div class="fifty-fifty-image__wrap-item" data-aos="fade-right" class="uk-height-large uk-background-cover" data-aos="fade-right" data-src="<?php echo esc_url($img_col_1_url); ?>" uk-img></div>

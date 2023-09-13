@@ -44,7 +44,7 @@ if (!empty($imageId)) {
 
 ?>
 <div class="uk-container-large uk-margin-auto">
-    <div class="module content <?php echo 'content__align-' . $text_aligment . '' ?> <?php echo $moduleClasses ?>">
+    <div class="module content spaces <?php echo 'content__align-' . $text_aligment . '' ?> <?php echo $moduleClasses ?>">
 
         <?php
         if ($imageplacement === 'left' && !empty($imageId)) {
